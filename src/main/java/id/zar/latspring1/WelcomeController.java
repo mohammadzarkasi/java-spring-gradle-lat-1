@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class HelloController {
+public class WelcomeController {
 
     @GetMapping("/")
     public String welcome()
@@ -19,5 +19,11 @@ public class HelloController {
     {
         model.addAttribute("name", name);
         return "hello";
+    }
+
+    @GetMapping("/errorx")
+    public String halamanError()
+    {
+        return "halaman_error";
     }
 }
